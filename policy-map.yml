@@ -1,0 +1,24 @@
+---
+-
+  name: netconf_pm_1
+  class-map-type: ethernet
+  class-map-name: netconf-eth-class-map1
+  flow:
+    -
+      id: 1
+      action:
+        - set-ctag-pcp: 6
+        - set-stag-pcp: 5
+    -
+      id: 2
+      action:
+        - add-ctag: 100
+-
+  name: netconf_pm_2
+  class-map-type: ethernet
+  class-map-name: netconf-eth-class-map2
+  flow:
+    -
+      id: 1
+      action:
+        - set-stag-pcp: 6

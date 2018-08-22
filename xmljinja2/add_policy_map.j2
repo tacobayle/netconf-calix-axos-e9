@@ -1,0 +1,24 @@
+<config>
+  <config xmlns="http://www.calix.com/ns/exa/base">
+    <profile>
+{%- for policymap in vars %}
+        <policy-map>
+          <name>{{ policymap['name'] }}</name>
+          <class-map-{{ policymap['class-map-type'] }}>
+            <name>{{ policymap['class-map-name'] }}</name>
+  {%- for flow in policymap['flow'] %}
+            <flow>
+              <flow-id>{{ flow['id'] }}</flow-id>
+    {%- for action in flow['action'] %}
+      {%- for key, value in action.items() %}
+              <{{ key }}>{{ value }}</{{ key }}>
+      {%- endfor %}
+    {%- endfor %}
+            </flow>
+  {%- endfor %}
+          </class-map-{{ policymap['class-map-type'] }}>
+        </policy-map>
+{%- endfor %}
+    </profile>
+  </config>
+</config>

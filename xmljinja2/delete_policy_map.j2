@@ -1,0 +1,11 @@
+<config>
+  <config xmlns="http://www.calix.com/ns/exa/base">
+    <profile>
+{%- for policymap in vars %}
+        <policy-map operation="delete">
+          <name>{{ policymap['name'] }}</name>
+        </policy-map>
+{%- endfor %}
+    </profile>
+  </config>
+</config>

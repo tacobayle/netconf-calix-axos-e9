@@ -1,0 +1,50 @@
+---
+-
+  name: netconf-eth-class-map1
+  flow:
+    -
+      index: 1
+      description: flow1
+      rule:
+        - 
+          index: 1
+          description: rule1
+          match: 
+            - any: 'true'
+        -
+          index: 2
+          description: rule2
+          match: 
+            - vlan: 600
+        -
+          index: 3
+          description: rule3
+          match: 
+            - untagged: 'true'
+        -
+          index: 4
+          description: rule4
+          match:
+            - ethertype: '0x8863'
+    -
+      index: 2
+      description: flow2
+      rule:
+        -
+          index: 1
+          description: rule1
+          match:
+            - pcp: 5
+            - vlan: 605
+-
+  name: netconf-eth-class-map2
+  flow:
+    -
+      index: 1
+      description: flow1
+      rule:
+        -
+          index: 1
+          description: rule1
+          match:
+            - vlan: 602

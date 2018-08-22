@@ -1,0 +1,7 @@
+--- 
+- 
+  name: netconf_tsp1
+  vlan: 601-605,608
+- 
+  name: netconf_tsp2
+  vlan: 600,609

@@ -1,0 +1,11 @@
+<config>
+  <config xmlns="http://www.calix.com/ns/exa/base">
+    <system>
+{%- for tsp in vars %}
+      <ont xmlns="http://www.calix.com/ns/exa/gpon-interface-base" operation="delete">
+        <ont-id>{{ tsp['id'] }}</ont-id>
+      </ont>
+{%- endfor %}
+    </system>
+  </config>
+</config>

@@ -1,0 +1,11 @@
+--- 
+- 
+  id: 1
+  description: ontnetconf1
+  profile: GP1000X
+  serial-number: 478AFA
+- 
+  id: 25
+  description: ontnetconf2
+  profile: GP1000X
+  serial-number: 478AFF

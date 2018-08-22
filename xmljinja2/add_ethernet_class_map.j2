@@ -1,0 +1,32 @@
+<config>
+  <config xmlns="http://www.calix.com/ns/exa/base">
+    <profile>
+      <class-map>
+{%- for classmap in vars %}
+        <ethernet>
+          <name>{{ classmap['name'] }}</name>
+  {%- for flow in classmap['flow'] %}
+            <flow>
+              <flow-index>{{ flow['index'] }}</flow-index>
+              <description>{{ flow['description'] }}</description>
+    {%- for rule in flow['rule'] %}
+                <rule>
+                  <index>{{ rule['index'] }}</index>
+                  <description>{{ rule['description'] }}</description>
+                  <match>
+      {%- for item in rule['match'] %}
+        {%- for key, value in item.items() %}
+                    <{{ key }}>{{ value }}</{{ key }}>
+        {%- endfor %}
+      {%- endfor %}
+                  </match>
+                </rule>
+    {%- endfor %}
+            </flow>
+  {%- endfor %}
+        </ethernet>
+{%- endfor %}
+      </class-map>
+    </profile>
+  </config>
+</config>

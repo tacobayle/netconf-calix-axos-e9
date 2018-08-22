@@ -1,0 +1,14 @@
+<config>
+  <config xmlns="http://www.calix.com/ns/exa/base">
+    <system>
+{%- for tsp in vars %}
+      <ont xmlns="http://www.calix.com/ns/exa/gpon-interface-base">
+        <ont-id>{{ tsp['id'] }}</ont-id>
+        <description>{{ tsp['description'] }}</description>
+        <profile-id>{{ tsp['profile'] }}</profile-id>
+        <serial-number>{{ tsp['serial-number'] }}</serial-number>
+      </ont>
+{%- endfor %}
+    </system>
+  </config>
+</config>

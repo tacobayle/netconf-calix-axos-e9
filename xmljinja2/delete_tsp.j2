@@ -1,0 +1,11 @@
+<config>
+  <config xmlns="http://www.calix.com/ns/exa/base">
+    <profile>
+{%- for id, vlanlist in vars %}
+      <transport-service-profile xmlns="http://www.calix.com/ns/exa/base" operation="delete">
+        <tsp-name>{{ id }}</tsp-name>
+      </transport-service-profile>
+{%- endfor %}
+    </profile>
+  </config>
+</config>

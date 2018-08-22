@@ -1,0 +1,53 @@
+--- 
+- 
+  description: netconf-600
+  id: 600
+  mode: N2ONE
+- 
+  description: netconf-601
+  id: 601
+  mode: N2ONE
+- 
+  description: netconf-602
+  id: 602
+  mode: N2ONE
+-
+  description: netconf-603
+  id: 603
+  mode: N2ONE
+-
+  description: netconf-604
+  id: 604
+  mode: N2ONE
+-
+  description: netconf-605
+  id: 605
+  mode: N2ONE
+-
+  description: netconf-606
+  id: 606
+  mode: N2ONE
+-
+  description: netconf-607
+  id: 607
+  mode: N2ONE
+-
+  description: netconf-608
+  id: 608
+  mode: N2ONE
+-
+  description: netconf-609
+  id: 609
+  mode: N2ONE
+-
+  description: netconf-701,702
+  id: 701,702
+  mode: N2ONE
+-
+  description: netconf-805-810
+  id: 805-810
+  mode: N2ONE
+-
+  description: netconf-905,910-915
+  id: 905,910-915
+  mode: N2ONE

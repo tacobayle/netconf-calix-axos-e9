@@ -1,0 +1,13 @@
+<config>
+  <config xmlns="http://www.calix.com/ns/exa/base">
+    <profile>
+      <class-map>
+{%- for classmap in vars %}
+        <ethernet operation="delete">
+          <name>{{ classmap['name'] }}</name>
+        </ethernet>
+{%- endfor %}
+      </class-map>
+    </profile>
+  </config>
+</config>

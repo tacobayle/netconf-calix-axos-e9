@@ -1,0 +1,11 @@
+<config>
+  <config xmlns="http://www.calix.com/ns/exa/base">
+    <system>
+{%- for vlan in vars %}
+      <vlan xmlns="http://www.calix.com/ns/exa/base" operation="delete">
+        <vlan-id>{{ vlan['id'] }}</vlan-id>
+      </vlan>
+{%- endfor %}
+    </system>
+  </config>
+</config>
