@@ -110,8 +110,8 @@ class nc_vlan:
 class nc_common:
 #
   def add(self):
-    print(self.vars)
-    print(self.file)
+    #print(self.vars)
+    #print(self.file)
     with open(self.file) as j:
       jinja_template = j.read()
       template = jinja2.Template(jinja_template)
