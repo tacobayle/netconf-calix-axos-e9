@@ -6,6 +6,7 @@ pip install ncclient
 please checkout the following for more information:
 https://github.com/ncclient/ncclient
 ++ ipaddress python module installed
+++ python jinja2 module installed
 
 Main srcript to run is axos_netconf.py
 
